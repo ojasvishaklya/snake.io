@@ -200,7 +200,7 @@ function serverAlert(alert) {
     gameAlert.innerText = alert;
     setTimeout(() => {
         gameAlert.innerText = "";
-    }, 3000);
+    }, 5000);
 }
 
 function reset() {
@@ -208,6 +208,5 @@ function reset() {
     gameCodeInput.value = '';
     initialScreen.style.display = "block";
     gameScreen.style.display = "none";
-    // location.reload();
 }
 
