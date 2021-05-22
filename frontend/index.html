@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Snake.io</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <section class="">
+
+    <h1 id="game-alert">
+      
+    </h1>
+
+    <div id="initialScreen" class="initialform">
+
+      <h1 class="mb-3">Snake.io</h1>
+
+
+      <div class="form-group my-4">
+        <input type="text" class="form-control" id="playerNameInput" placeholder="Enter your name">
+      </div>
+
+      <button type="submit" class="btn btn-dark" id="newGameButton">
+        Create New Game
+      </button>
+      <div class="my-1">Or</div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="gameCodeInput" placeholder="Enter Game Code">
+      </div>
+      <button type="submit" class=" my-1 btn btn-outline-dark" id="joinGameButton">
+        Join Game
+      </button>
+      <button type="submit" class=" mb-1 btn btn-dark" id="spectateGameButton">
+        Spectate Game
+      </button>
+
+    </div>
+
+    <div id="gameScreen" class="h-100">
+      <div class="header">
+        <h1>Snake.io</h1>
+      </div>
+
+      <div class="game-layout">
+        <div class="side-bar">
+          <h3 class="mb-5">Current Scores</h3>
+          <div class="player-info">
+
+            <h5><span id="p1Name"> Player 1 </span> : <span id="p1Score">0</span>/10</h5>
+            <h5><span id="p2Name"> Player 2 </span>: <span id="p2Score">0</span>/10</h5>
+          </div>
+          <div class="game-buttons">
+            <button type="submit" class="my-1 btn btn-outline-dark" id="restartGameButton">
+              Restart Game
+            </button>
+            <button type="submit" class="my-1 btn btn-dark" id="quitGameButton">
+              Quit Game
+            </button>
+          </div>
+        </div>
+
+        <canvas id="canvas"></canvas>
+        <div class="side-bar server-logs">
+          <h3 class="mb-5">Server Logs</h3>
+          <div class="overflow-auto">
+            <ul>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header mt-5">
+        <h3>Your game code is: <span id="gameCodeDisplay"></span></h3>
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
