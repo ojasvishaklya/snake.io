@@ -9,7 +9,7 @@ let playerNumber;
 let gameActive = false;
 let isSpectating = false;
 
-const socket = io('http://localhost:3000')
+const socket = io('https://sheltered-falls-45456.herokuapp.com/')
 
 
 socket.on('init', handleInit);
